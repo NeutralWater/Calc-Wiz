@@ -1,6 +1,6 @@
 import math
-from constants import *
-import constants
+from formulas.constants import *
+import formulas.constants as constants
 
 def constant_topic_lib():
     print("1. Mathematical Constants")
