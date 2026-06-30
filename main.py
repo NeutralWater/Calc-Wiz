@@ -1,18 +1,10 @@
-from formulas import algebra, calculus, conversions, geometry, physics, statistics
 from topic_lib import *
-from runners.algebra_runner import run_algebra
-from runners.calculus_runner import run_calculus
-from runners.constant_runner import run_constants
-from runners.conversions_runner import run_conversions
-from runners.geometry_runner import run_geometry
-from runners.physics_runner import run_physics
-from runners.statistics_runner import run_statistics
-
+from runners import *
 
 def main():
     menu()
     choice = input("Select Module > ")
-    print("")
+    print()
 
     if choice == "1":
         run_algebra()
@@ -31,8 +23,10 @@ def main():
     elif choice == "8":
         run_linear_algebra()
     elif choice == "0":
-        exit()
+        return
     else:
         print("Invalid choice.")
 
-main()
+
+if __name__ == "__main__":
+    main()
