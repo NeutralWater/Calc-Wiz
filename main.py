@@ -28,6 +28,10 @@ def main():
         run_astronomy()
     elif choice == "11":
         run_computer_science()
+    elif choice == "12":
+        run_electrical_engineering()
+    elif choice == "13":
+        run_digital_electronics()
     elif choice == "0":
         return
     else:

@@ -9,3 +9,5 @@ from .linear_algebra_runner import run_linear_algebra
 from .chemistry_runner import run_chemistry
 from .astronomy_runner import run_astronomy
 from .computer_science_runner import run_computer_science
+from .electrical_engineering_runner import run_electrical_engineering
+from .digital_electronics_runner import run_digital_electronics

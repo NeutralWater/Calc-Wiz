@@ -11,3 +11,5 @@ from .linear_algebra_lib import *
 from .chemistry_lib import *
 from .astronomy_lib import *
 from .computer_science_lib import *
+from .electrical_engineering_lib import *
+from .digital_electronics_lib import *

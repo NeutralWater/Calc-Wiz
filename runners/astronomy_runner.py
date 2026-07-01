@@ -7,7 +7,6 @@ import formula_display.display_astronomy as fd
 def show_formula(formula):
     core.display_formula(formula)
 
-
 def run_astronomy():
     astronomy_lib()
     choice = input("Select a formula: ")

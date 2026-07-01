@@ -1,11 +1,10 @@
 from formulas import algebra
 from topic_lib import algebra_lib
-import math
 import formula_display.core as core
 import formula_display.display_algebra as fd
 
 def show_formula(formula):
-    fd.display_formula(formula)
+    core.display_formula(formula)
 
 def run_algebra():
     algebra_lib()

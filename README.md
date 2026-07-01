@@ -8,8 +8,8 @@ Calc Wiz provides quick access to formulas, constants, scientific calculations, 
 
 ## Features
 
-- 📚 10 STEM modules
-- 🧮 130 formulas
+- 📚 10+ STEM modules
+- 🧮 150+ formulas
 - 📖 Built-in formula explanations
 - 📐 Organized by subject
 - ⚡ Fast terminal interface
@@ -30,7 +30,7 @@ Calc Wiz provides quick access to formulas, constants, scientific calculations, 
 - Chemistry
 - Astronomy
 - Computer Science
-
+- etc
 ---
 
 ## Project Structure
@@ -49,8 +49,6 @@ Calc-Wiz/
 
 ---
 
-## Screenshots
-
 ### Main Menu
 
 ╔════════════════════════════════════════════╗
@@ -58,8 +56,8 @@ Calc-Wiz/
 ║               Version 1.0.0                ║
 ╠════════════════════════════════════════════╣
 ║ Status         : ONLINE                    ║
-║ Formula Modules: 10 Loaded                 ║
-║ Total Formulas : 130 Available             ║
+║ Formula Modules: 12 Loaded                 ║
+║ Total Formulas : 152 Available             ║
 ║ Constant Library: Loaded                   ║
 ║ Formula Database: Ready                    ║
 ╠════════════════════════════════════════════╣
@@ -75,6 +73,8 @@ Calc-Wiz/
 ║ [9] Chemistry                              ║
 ║ [10] Astronomy                             ║
 ║ [11] Computer Science                      ║
+║ [12] Electrical Engineering                ║
+║ [13] Digital Electronics                   ║
 ║                                            ║
 ║ [0] Exit                                   ║
 ║                                            ║

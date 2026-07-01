@@ -97,6 +97,7 @@ def run_computer_science():
         code = int(input("ASCII code: "))
         print(f"Character = {computer_science.ascii_to_char(code)}")
         show_formula(fd.ascii_to_char())
+    
 
     else:
         print("Invalid option.")

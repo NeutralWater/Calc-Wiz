@@ -1,48 +1,53 @@
 import inspect
 
-from formulas import (
-    algebra,
-    calculus,
-    conversions,
-    geometry,
-    physics,
-    statistics,
-    linear_algebra,
-    chemistry,
-    astronomy,
-    computer_science,
-
+from formula_display import (
+    display_algebra,
+    display_astronomy,
+    display_calculus,
+    display_chemistry,
+    display_computer_science,
+    display_conversions,
+    display_digital_electronics,
+    display_electrical_engineering,
+    display_geometry,
+    display_linear_algebra,
+    display_physics,
+    display_statistics,
 )
 
-MODULES = {
-    "Algebra": algebra,
-    "Calculus": calculus,
-    "Conversions": conversions,
-    "Geometry": geometry,
-    "Physics": physics,
-    "Statistics": statistics,
-    "Linear Algebra": linear_algebra,
-    "Chemistry": chemistry,
-    "Astronomy": astronomy,
-    "Computer Science": computer_science
-}
+
+FORMULA_DISPLAY_MODULES = [
+    display_algebra,
+    display_astronomy,
+    display_calculus,
+    display_chemistry,
+    display_computer_science,
+    display_conversions,
+    display_digital_electronics,
+    display_electrical_engineering,
+    display_geometry,
+    display_linear_algebra,
+    display_physics,
+    display_statistics,
+]
+
+
+def count_functions(module):
+    return sum(
+        1
+        for _, func in inspect.getmembers(module, inspect.isfunction)
+        if func.__module__ == module.__name__
+    )
 
 
 def formula_count():
     total = 0
 
-    for module in MODULES.values():
-        total += len(inspect.getmembers(module, inspect.isfunction))
+    for module in FORMULA_DISPLAY_MODULES:
+        total += count_functions(module)
 
     return total
 
 
 def module_count():
-    return len(MODULES)
-
-
-def module_breakdown():
-    return {
-        name: len(inspect.getmembers(module, inspect.isfunction))
-        for name, module in MODULES.items()
-    }
+    return len(FORMULA_DISPLAY_MODULES)

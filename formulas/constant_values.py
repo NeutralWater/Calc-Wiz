@@ -27,6 +27,9 @@ HUBBLE_CONSTANT = 67.4                     # km/s/Mpc
 RYDBERG_CONSTANT = 10973731.568160         # m⁻¹
 FINE_STRUCTURE_CONSTANT = 7.2973525693e-3  # Dimensionless
 BOHR_RADIUS = 5.29177210903e-11            # m
-C = 299792458                   # m/s
-SIGMA = 5.670374419e-8          # W m^-2 K^-4
-WIEN = 2.897771955e-3           # m·K
+C = 299792458                              # m/s
+SIGMA = 5.670374419e-8                     # W m^-2 K^-4
+WIEN = 2.897771955e-3                      # m·K
+
+#Electricity
+K = 8.9875517923e9                         # Eletrostatic Value
