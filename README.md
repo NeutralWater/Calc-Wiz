@@ -1,4 +1,4 @@
-# 🧮 Calc Wiz
+# 🧮 Axiom
 
 A modular mathematical computation terminal built in Python.
 
