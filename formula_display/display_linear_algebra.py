@@ -172,3 +172,253 @@ def trace():
         topic="Matrix Trace",
         notes="Trace only works for square matrices."
     )
+
+def matrix_inverse():
+    return make_formula(
+        "A⁻¹",
+        {
+            "A": "Square matrix",
+            "A⁻¹": "Inverse of A"
+        },
+        topic="Matrix Inverse"
+    )
+
+
+def matrix_rank():
+    return make_formula(
+        "rank(A)",
+        {
+            "A": "Matrix",
+            "rank(A)": "Dimension of the column space"
+        },
+        topic="Matrix Rank"
+    )
+
+
+def rref():
+    return make_formula(
+        "RREF(A)",
+        {
+            "A": "Matrix",
+            "RREF(A)": "Reduced row echelon form of A"
+        },
+        topic="Reduced Row Echelon Form"
+    )
+
+
+def determinant():
+    return make_formula(
+        "|A|",
+        {
+            "A": "Square matrix",
+            "|A|": "Determinant of A"
+        },
+        topic="Matrix Determinant"
+    )
+
+
+def angle_between_vectors():
+    return make_formula(
+        "θ = arccos((u · v)/(|u||v|))",
+        {
+            "u": "First vector",
+            "v": "Second vector",
+            "θ": "Angle between vectors"
+        },
+        units="Degrees",
+        topic="Angle Between Vectors"
+    )
+
+
+def vector_projection():
+    return make_formula(
+        "projᵥ(u) = ((u · v)/(v · v))v",
+        {
+            "u": "Vector being projected",
+            "v": "Projection vector"
+        },
+        topic="Vector Projection"
+    )
+
+
+def distance_between_vectors():
+    return make_formula(
+        "d = ||u - v||",
+        {
+            "u": "First vector",
+            "v": "Second vector",
+            "d": "Distance between vectors"
+        },
+        topic="Distance Between Vectors"
+    )
+
+def eigenvalues():
+    return make_formula(
+        "det(A - λI) = 0",
+        {
+            "A": "Square matrix",
+            "λ": "Eigenvalue",
+            "I": "Identity matrix"
+        },
+        topic="Eigenvalues"
+    )
+
+
+def eigenvectors():
+    return make_formula(
+        "Av = λv",
+        {
+            "A": "Square matrix",
+            "v": "Eigenvector",
+            "λ": "Eigenvalue"
+        },
+        topic="Eigenvectors"
+    )
+
+
+def characteristic_polynomial():
+    return make_formula(
+        "p(λ) = det(A - λI)",
+        {
+            "A": "Square matrix",
+            "λ": "Eigenvalue variable",
+            "p(λ)": "Characteristic polynomial"
+        },
+        topic="Characteristic Polynomial"
+    )
+
+
+def null_space():
+    return make_formula(
+        "Ax = 0",
+        {
+            "A": "Matrix",
+            "x": "Vector in the null space"
+        },
+        topic="Null Space"
+    )
+
+
+def column_space():
+    return make_formula(
+        "Col(A)",
+        {
+            "A": "Matrix",
+            "Col(A)": "Span of all column vectors"
+        },
+        topic="Column Space"
+    )
+
+
+def row_space():
+    return make_formula(
+        "Row(A)",
+        {
+            "A": "Matrix",
+            "Row(A)": "Span of all row vectors"
+        },
+        topic="Row Space"
+    )
+
+
+def gram_schmidt():
+    return make_formula(
+        "uᵢ = vᵢ - Σ proj(uⱼ)",
+        {
+            "vᵢ": "Original vector",
+            "uᵢ": "Orthogonal vector"
+        },
+        topic="Gram-Schmidt Orthogonalization"
+    )
+
+
+def linear_independence():
+    return make_formula(
+        "rank(A) = number of vectors",
+        {
+            "A": "Matrix formed by vectors",
+            "rank(A)": "Rank of the matrix"
+        },
+        topic="Linear Independence Test"
+    )
+
+
+def lu_decomposition():
+    return make_formula(
+        "A = LU",
+        {
+            "A": "Original matrix",
+            "L": "Lower triangular matrix",
+            "U": "Upper triangular matrix"
+        },
+        topic="LU Decomposition"
+    )
+
+
+def qr_decomposition():
+    return make_formula(
+        "A = QR",
+        {
+            "A": "Original matrix",
+            "Q": "Orthogonal matrix",
+            "R": "Upper triangular matrix"
+        },
+        topic="QR Decomposition"
+    )
+
+
+def matrix_norm():
+    return make_formula(
+        "||A||",
+        {
+            "A": "Matrix",
+            "||A||": "Norm (size) of the matrix"
+        },
+        topic="Matrix Norm"
+    )
+
+
+def orthogonal_matrix_check():
+    return make_formula(
+        "AᵀA = I",
+        {
+            "A": "Matrix",
+            "Aᵀ": "Transpose of A",
+            "I": "Identity matrix"
+        },
+        topic="Orthogonal Matrix Check"
+    )
+
+
+def symmetric_matrix_check():
+    return make_formula(
+        "A = Aᵀ",
+        {
+            "A": "Matrix",
+            "Aᵀ": "Transpose of A"
+        },
+        topic="Symmetric Matrix Check"
+    )
+
+
+def skew_symmetric_matrix_check():
+    return make_formula(
+        "Aᵀ = -A",
+        {
+            "A": "Matrix",
+            "Aᵀ": "Transpose of A"
+        },
+        topic="Skew-Symmetric Matrix Check"
+    )
+
+
+def diagonalization_check():
+    return make_formula(
+        "A = PDP⁻¹",
+        {
+            "A": "Original matrix",
+            "P": "Eigenvector matrix",
+            "D": "Diagonal matrix"
+        },
+        topic="Diagonalization Check"
+    )

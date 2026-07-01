@@ -1,5 +1,5 @@
 import math
-
+from sympy import Matrix
 
 def dot_product(v1, v2):
     if len(v1) != len(v2):
@@ -117,3 +117,172 @@ def trace(A):
             return None
 
     return sum(A[i][i] for i in range(len(A)))
+
+def matrix_inverse(A):
+    try:
+        return Matrix(A).inv()
+    except:
+        return None
+
+
+def matrix_rank(A):
+    try:
+        return Matrix(A).rank()
+    except:
+        return None
+
+
+def rref(A):
+    try:
+        return Matrix(A).rref()[0]
+    except:
+        return None
+
+
+def determinant(A):
+    try:
+        M = Matrix(A)
+
+        if M.rows != M.cols:
+            return None
+
+        return M.det()
+    except:
+        return None
+
+
+def angle_between_vectors(u, v):
+    if len(u) != len(v):
+        return None
+
+    dot = sum(a * b for a, b in zip(u, v))
+    mag_u = math.sqrt(sum(a * a for a in u))
+    mag_v = math.sqrt(sum(b * b for b in v))
+
+    if mag_u == 0 or mag_v == 0:
+        return None
+
+    cos_theta = dot / (mag_u * mag_v)
+    cos_theta = max(-1, min(1, cos_theta))
+
+    return math.degrees(math.acos(cos_theta))
+
+
+def vector_projection(u, v):
+    if len(u) != len(v):
+        return None
+
+    denominator = sum(x * x for x in v)
+
+    if denominator == 0:
+        return None
+
+    scalar = sum(a * b for a, b in zip(u, v)) / denominator
+    return [scalar * x for x in v]
+
+
+def distance_between_vectors(u, v):
+    if len(u) != len(v):
+        return None
+
+    return math.sqrt(sum((a - b) ** 2 for a, b in zip(u, v)))
+
+def eigenvalues(A):
+    try:
+        return Matrix(A).eigenvals()
+    except:
+        return None
+
+
+def eigenvectors(A):
+    try:
+        return Matrix(A).eigenvects()
+    except:
+        return None
+
+
+def characteristic_polynomial(A):
+    try:
+        return Matrix(A).charpoly().as_expr()
+    except:
+        return None
+
+
+def null_space(A):
+    return Matrix(A).nullspace()
+
+
+def column_space(A):
+    return Matrix(A).columnspace()
+
+
+def row_space(A):
+    return Matrix(A).rowspace()
+
+
+def gram_schmidt(vectors):
+    try:
+        matrix_vectors = [Matrix(v) for v in vectors]
+        return Matrix.orthogonalize(*matrix_vectors, normalize=False)
+    except:
+        return None
+
+
+def linear_independence(vectors):
+    try:
+        matrix = Matrix(vectors).T
+        return matrix.rank() == len(vectors)
+    except:
+        return None
+
+
+def lu_decomposition(A):
+    try:
+        return Matrix(A).LUdecomposition()
+    except:
+        return None
+
+
+def qr_decomposition(A):
+    try:
+        return Matrix(A).QRdecomposition()
+    except:
+        return None
+
+
+def matrix_norm(A):
+    try:
+        return Matrix(A).norm()
+    except:
+        return None
+
+
+def is_orthogonal(A):
+    try:
+        M = Matrix(A)
+        return M.T * M == Matrix.eye(M.cols)
+    except:
+        return None
+
+
+def is_symmetric(A):
+    try:
+        M = Matrix(A)
+        return M == M.T
+    except:
+        return None
+
+
+def is_skew_symmetric(A):
+    try:
+        M = Matrix(A)
+        return M == -M.T
+    except:
+        return None
+
+
+def is_diagonalizable(A):
+    try:
+        return Matrix(A).is_diagonalizable()
+    except:
+        return None

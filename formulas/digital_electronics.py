@@ -62,7 +62,7 @@ def format_truth_table(e):
     
     return "\n".join(lines)
 
-# from here to ~~ is for k map
+# from here to 181 is for k map
 def gray_code(n):
     if n == 0:
         return [""]
