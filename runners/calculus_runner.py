@@ -85,7 +85,7 @@ def run_calculus():
         show_formula(fd.power_rule())
         print("")
 
-        elif choice == "9":
+    elif choice == "9":
         expr = input("Function in x: ")
         print("")
         inc, dec = calculus.increasing_decreasing(expr)
@@ -165,6 +165,6 @@ def run_calculus():
         print(f"Approximate Root = {calculus.newtons_method(expr, guess, iterations)}")
         show_formula(fd.newtons_method())
         print("")
-        
+
     elif choice == "0":
         exit()    
